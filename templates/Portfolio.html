@@ -1,138 +1,155 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peerada (แพรวา): About Me</title>
-    <!-- โหลด Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* กำหนด Font หลักและพื้นหลัง */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* พื้นหลังสีขาวนวล */
-            color: #1e293b; /* ข้อความสีน้ำเงินเข้ม */
-        }
-        /* กำหนดสีหลักที่ใช้ (Custom Colors) */
-        .color-primary { color: #ED77E5; } /* สีชมพูที่คุณเลือก */
-        .color-secondary { color: #B1DEB8; } /* สีเขียวที่คุณเลือก */
-        .bg-color-primary-light { background-color: #f7e6f6; } /* ชมพูอ่อนสำหรับพื้นหลัง */
-        
-        /* สไตล์สำหรับตาราง (เพื่อให้ดูทันสมัย ไม่ใช้ border="1") */
-        .styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1.5rem;
-            text-align: left;
-        }
-        .styled-table th, .styled-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .styled-table th {
-            background-color: #B1DEB8; /* ใช้สีเขียวที่คุณเลือกเป็นสีพื้นหลัง Header */
-            color: #1e293b;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-    </style>
-</head>
-<body class="p-4 sm:p-8">
-
-    <div class="max-w-4xl mx-auto bg-white p-6 md:p-10 rounded-xl shadow-2xl space-y-8">
-        
-        <!-- ส่วนหัวและข้อมูลแนะนำตัว -->
-        <header class="text-center pb-6 border-b border-gray-200">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900">
-                Portfolio
-            </h1>
-        </header>
-
-        <!-- ข้อมูลส่วนตัว (Hero) -->
-        <div class="flex flex-col items-center space-y-4">
-            <img src="./static/img2.jpg" alt="รูปโปรไฟล์" 
-                 class="w-40 h-40 rounded-full object-cover border-4 border-gray-200 shadow-md"/>
-                 
-            <h2 class="text-3xl font-bold color-primary">Peerada Somtem</h2>
-        </div>
-
-        <!-- ส่วนเกี่ยวกับตัวเอง -->
-        <section class="space-y-6">
-            <h4 class="text-xl font-bold color-secondary border-b-2 border-gray-200 pb-1">About My self</h4>
-            <p class="text-gray-700 leading-relaxed"> 
-                 "พีรดา สมเต็ม (แพรวา) นิสิตมหาวิทยาลัยพะเยา สาขาวิทยาการคอมพิวเตอร์ ชั้นปีที่2"  
-
-            </p>
-        </section>
-
-        <!-- ส่วนงานอดิเรก อาหาร และสถานที่โปรด -->
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- Hobby -->
-            <div class="bg-color-primary-light p-5 rounded-xl shadow-sm">
-                <h4 class="text-xl font-bold color-secondary mb-2">Hobby</h4>
-                <p class="text-gray-700"> 
-                    ชอบอ่านหนังสือนิายในเวลาว่างหรือเล่นกับน้องหมาที่คาเฟ่หน้ามอ
-                </p>
-            </div>
-
-            <!-- Fav Food / Location -->
-            <div class="space-y-4">
-                <div class="bg-gray-50 p-5 rounded-xl shadow-sm">
-                    <h4 class="text-xl font-bold color-secondary mb-2">Fav Food</h4>
-                    <p class="text-gray-700"> 
-                        ชอบอาหารไทยและอาหารที่เน้นน้ำซุปเป็นหลัก
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-5 rounded-xl shadow-sm">
-                    <h4 class="text-xl font-bold color-secondary mb-2">Interested</h4>
-                    <p class="text-gray-700"> 
-                        สนใจด้านการออกแบบ UX/UI และฝึกการเขียนโค้ด Fontend
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ประวัติการศึกษา -->
-        <section>
-            <h3 class="text-2xl font-bold text-gray-900 mt-6 mb-4 border-t border-gray-200 pt-6">ประวัติการศึกษา</h3>
-            <table class="styled-table shadow-lg rounded-lg overflow-hidden">
-                <thead>
-                    <tr>
-                        <th class="text-left">ระดับการศึกษา</th>
-                        <th class="text-left">ชั้นปีที่</th>
-                        <th class="text-left">สถาบัน</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>อนุบาล</td>
-                        <td>1-3</td>
-                        <td>โรงเรียนพงศ์อัมพรวิทยา</td>
-                    </tr>
-                    <tr>
-                        <td>ประถมศึกษา</td>
-                        <td>1-2</td>
-                        <td>โรงเรียนอนุบาลจุน(บ้านบัวสถาน)</td>   
-                    </tr>
-                    <tr>
-                        <td>ประถมศึกษา</td>
-                        <td>3-6</td>
-                        <td>โรงเรียนปิยมิตรวิทยา</td>  
-                    </tr>
-                    <tr>
-                        <td>มัธยมศึกษา</td>
-                        <td>1-6</td>
-                        <td>โรงเรียนพะเยาพิทยาคม</td>   
-                    </tr> 
-                     <tr>
-                        <td>ปัจจุบัน</td>
-                        <td>2</td>
-                        <td>มหาวิทยาลัยพะเยา</td>   
-                    </tr> 
-                </tbody>
-            </table>
-        </section>
-        
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-name">
+  <img src="https://raw.githubusercontent.com/wadev88/wadev88.github.io/main/img2.jpg" alt="รูปโปรไฟล์ของ Peerada Somtem" class="avatar" width="150" height="150" />
+  <div>
+    <h2 id="hero-name">พีรดา สมเต็ม (แพรวา)</h2>
+    <p class="meta">นิสิตปีที่ 2 สาขาวิทยาการคอมพิวเตอร์ — University of Phayao</p>
+    <p style="margin-top:8px">สนใจด้านการออกแบบ UX/UI, พัฒนา Frontend (HTML/CSS/JavaScript), และการออกแบบประสบการณ์ผู้ใช้ที่เข้าถึงได้</p>
+    <div style="margin-top:10px" class="socials" aria-hidden="false">
+      <!-- ใส่ลิงก์จริงเมื่อมี -->
+      <a class="btn" href="#" aria-label="ดาวน์โหลดเรซูเม่ (PDF)">ดาวน์โหลดเรซูเม่</a>
+      <a class="btn" href="#" style="background:#1da1f2" aria-label="Twitter / X">Twitter</a>
+      <a class="btn" href="#" style="background:#0a66c2" aria-label="LinkedIn">LinkedIn</a>
     </div>
-</body>
-</html>
+  </div>
+</section>
+
+<!-- MAIN GRID -->
+<div class="grid" style="margin-top:18px">
+  <!-- Left column: About, Projects -->
+  <div>
+    <!-- About -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h3 id="about-title">เกี่ยวกับฉัน</h3>
+      <p>สรุปสั้น ๆ เกี่ยวกับตัวคุณ — ทักษะหลัก เป้าหมายการเรียนและงาน ตัวอย่างเช่น: "ฉันเป็นนิสิตปี 2 ที่ชอบออกแบบ UI และทดลองทำโปรเจกต์เว็บไซต์ที่ใช้งานได้จริง — มุ่งหวังเป็น Frontend Developer/UX Designer หลังสำเร็จการศึกษา"</p>
+      <ul>
+        <li>ภาษาโปรแกรมที่ถนัด: HTML, CSS, JavaScript</li>
+        <li>เครื่องมือที่ใช้: Figma, Git, VS Code</li>
+        <li>ความสนใจพิเศษ: การออกแบบที่เข้าถึงได้ (accessibility), responsive design</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="card" aria-labelledby="projects-title" style="margin-top:14px">
+      <h3 id="projects-title">โปรเจกต์ตัวอย่าง</h3>
+      <p class="meta">โปรดเพิ่มลิงก์ GitHub, รูปภาพ, และคำอธิบายสั้น ๆ ให้แต่ละโปรเจกต์</p>
+
+      <div class="projects" aria-live="polite">
+        <!-- ตัวอย่างโปรเจกต์ -->
+        <article class="project" aria-labelledby="proj1">
+          <h4 id="proj1">Portfolio Website</h4>
+          <p>เว็บไซต์แสดงผลงานที่ตอบสนองทุกขนาดหน้าจอ — HTML/CSS/JS, มีส่วนติดต่อผู้ใช้แบบเรียบง่าย</p>
+          <p class="meta">เทคโนโลยี: HTML, CSS, JavaScript — <a href="#" rel="noopener">ดูบน GitHub</a></p>
+        </article>
+
+        <article class="project" aria-labelledby="proj2">
+          <h4 id="proj2">Cafe Pet Finder (Mini App)</h4>
+          <p>หน้าร้านคาเฟ่และระบบแนะนำเมนู โดยเน้นการออกแบบ UX สำหรับผู้ใช้ใหม่</p>
+          <p class="meta">เทคโนโลยี: Figma, HTML, CSS — <a href="#" rel="noopener">ดูรายละเอียด</a></p>
+        </article>
+      </div>
+
+      <p style="margin-top:12px"><a href="#" class="btn">ดูโปรเจกต์ทั้งหมด</a></p>
+    </section>
+
+    <!-- Blog / Notes (ถ้ามี) -->
+    <section class="card" style="margin-top:14px" aria-labelledby="blog-title">
+      <h3 id="blog-title">บันทึก / บทความสั้น</h3>
+      <p class="meta">เขียนเล็กๆ น้อยๆ เกี่ยวกับกระบวนการเรียนรู้ หรือโพสต์วิธีแก้ปัญหา (tutorial)</p>
+      <ul>
+        <li><strong>วิธีทำให้หน้าเว็บเข้าถึงได้:</strong> สรุปสั้น ๆ และตัวอย่างโค้ด</li>
+        <li><strong>เรียนรู้ React เบื้องต้น:</strong> โปรเจกต์ตัวอย่างและปัญหาที่พบ</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Right column: Skills, Education, Contact -->
+  <aside>
+    <!-- Skills -->
+    <section id="skills" class="card" aria-labelledby="skills-title">
+      <h3 id="skills-title">ทักษะ (Skills)</h3>
+      <div class="skills" role="list">
+        <div class="skill" role="listitem" aria-label="HTML 90%">
+          <span>HTML</span>
+          <div class="bar" aria-hidden="true"><i style="width:90%"></i></div>
+          <small class="meta">90%</small>
+        </div>
+
+        <div class="skill" role="listitem" aria-label="CSS 80%">
+          <span>CSS</span>
+          <div class="bar" aria-hidden="true"><i style="width:80%"></i></div>
+          <small class="meta">80%</small>
+        </div>
+
+        <div class="skill" role="listitem" aria-label="JavaScript 65%">
+          <span>JavaScript</span>
+          <div class="bar" aria-hidden="true"><i style="width:65%"></i></div>
+          <small class="meta">65%</small>
+        </div>
+
+        <div class="skill" role="listitem" aria-label="Figma 70%">
+          <span>Figma (UI/UX)</span>
+          <div class="bar" aria-hidden="true"><i style="width:70%"></i></div>
+          <small class="meta">70%</small>
+        </div>
+      </div>
+      <p style="margin-top:8px" class="meta">เพิ่มระดับและเครื่องมือที่ใช้จริง (เช่น Git, React, Node.js) เมื่อพร้อม</p>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="card" style="margin-top:14px" aria-labelledby="edu-title">
+      <h3 id="edu-title">ประวัติการศึกษา</h3>
+      <!-- ตารางของผู้ใช้ที่มีอยู่ -->
+      <table aria-label="ประวัติการศึกษา">
+        <thead>
+          <tr><th>ระดับ</th><th>ชั้นปี</th><th>สถาบัน</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>อนุบาล</td><td>1-3</td><td>โรงเรียนพงศ์อัมพรวิทยา</td></tr>
+          <tr><td>ประถม</td><td>1-2</td><td>โรงเรียนอนุบาลจุน (บ้านบัวสถาน)</td></tr>
+          <tr><td>ประถม</td><td>3-6</td><td>โรงเรียนปิยมิตรวิทยา</td></tr>
+          <tr><td>มัธยม</td><td>1-6</td><td>โรงเรียนพะเยาพิทยาคม</td></tr>
+          <tr><td>ปัจจุบัน</td><td>ปีที่ 2</td><td>มหาวิทยาลัยพะเยา</td></tr>
+        </tbody>
+      </table>
+      <p class="meta" style="margin-top:8px">เพิ่มกิจกรรมพิเศษ, เกรดเฉลี่ย (ถ้าต้องการ), โครงการที่เกี่ยวข้อง</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="card" style="margin-top:14px" aria-labelledby="contact-title">
+      <h3 id="contact-title">ติดต่อ</h3>
+      <div class="contacts">
+        <p class="meta">ใส่อีเมลและหมายเลขโทรศัพท์ที่ต้องการให้ติดต่อ</p>
+        <p><strong>อีเมล:</strong> <a href="mailto:peerada@example.com">peerada@example.com</a></p>
+        <p><strong>โทร:</strong> <a href="tel:+66xxxxxxxxx">+66 xxxxx xxxx</a></p>
+
+        <!-- แบบฟอร์มติดต่อที่ไม่ต้องใช้ server (ตัวอย่าง) -->
+        <form action="#" method="post" aria-label="แบบฟอร์มติดต่อ">
+          <label for="name">ชื่อ</label><br />
+          <input id="name" name="name" type="text" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd" />
+          <label for="message">ข้อความ</label><br />
+          <textarea id="message" name="message" rows="4" required style="width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd"></textarea>
+          <button type="submit" class="btn" style="margin-top:6px">ส่งข้อความ</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Extras: Certificates / Languages / Volunteer -->
+    <section class="card" style="margin-top:14px" aria-labelledby="extras-title">
+      <h3 id="extras-title">เพิ่มเติม</h3>
+      <p class="meta">ตัวอย่างรายการที่ควรเพิ่มเมื่อมี</p>
+      <ul>
+        <li>ใบประกาศ/คอร์สออนไลน์ (เช่น Coursera, FreeCodeCamp)</li>
+        <li>ภาษา: ไทย (ภาษาแม่), อังกฤษ (ระดับ)</li>
+        <li>กิจกรรมอาสา / ชมรม / งานแข่งขัน (Hackathon)</li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <p>ออกแบบโดย Peerada Somtem — ปรับแต่งเพิ่มเติมได้ตามต้องการ</p>
+  <p class="meta">คำแนะนำ: เพิ่มลิงก์ GitHub, ตัวอย่างโค้ด, รูปงาน, และปรับให้รองรับการเข้าถึง (alt, aria-label) อย่างสม่ำเสมอ</p>
+</footer>
+</div> </body> </html>
